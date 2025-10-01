@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <title>Вивід тексту</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Arial,sans-serif;background:#f7f7f7;padding:24px}
+    #out{white-space:pre-wrap;background:#fff;padding:12px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.08);margin-top:12px}
+    button{padding:8px 12px;border-radius:6px;border:1px solid #ccc;background:#fff;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h3>Маленька програма — вивід тексту</h3>
+  <button id="run">Виконати</button>
+  <div id="out">Тут з'явиться текст після натискання...</div>
+
+  <script>
+    document.getElementById('run').addEventListener('click', () => {
+      const text = "Привіт! Це текст, виведений програмою.\nМожеш замінити цей рядок на свій.";
+      document.getElementById('out').textContent = text;
+      console.log(text);
+    });
+  </script>
+</body>
+</html>
